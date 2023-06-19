@@ -1,17 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+// import logo from './logo.svg';
+import Home from "./components/Home/index";
+import Test from "./components/Test"
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          First deployment of React App
-        </p>
-        
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/test" element={<Test />} />
+      </Routes>
+    </Router>
   );
 }
 
